@@ -42,8 +42,8 @@ while window_open:
         if event.type == pg.QUIT:
             window_open = False
 
-    # Adiciona setas no array
-    if rd.random() * 20 <= 1 and len(arrows_array) <= arConfig.max_arrows:
+    # Adiciona setas no array aleatoriamente
+    if rd.random() * 10 <= 1 and len(arrows_array) <= arConfig.max_arrows:
         arrows_array.append(arrow.Arrow(rd.choice(direction_list), arConfig.arrow_falling_speed))
 
     # Atualiza e Desenha na tela

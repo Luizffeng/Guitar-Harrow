@@ -26,7 +26,7 @@ class ArrowConfig:
 
     max_arrow_scale = 100
     min_arrow_scale = 25
-    max_arrows = 20
+    max_arrows = 50
     arrow_falling_speed = 8
 
 
