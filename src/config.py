@@ -12,8 +12,6 @@ class ArrowConfig:
                                 'down': 450,
                                 'right': 650}
 
-    static_arrows_y_position = 400
-
     static_arrow_images = {'left': 'img/static_arrow_left.png',
                            'up': 'img/static_arrow_up.png',
                            'down': 'img/static_arrow_down.png',
@@ -26,9 +24,18 @@ class ArrowConfig:
 
     max_arrow_scale = 100
     min_arrow_scale = 25
-    max_arrows = 50
+    max_arrows = 20
     arrow_falling_speed = 8
 
+    pressed_arrow_size = 130
+    static_arrow_size = 100
+
+    static_arrows_y_position = 400
+    pressed_arrows_y_position = static_arrows_y_position - ((pressed_arrow_size - static_arrow_size)/2)
+    pressed_arrows_x_position = {'left': static_arrows_x_position['left'] - ((pressed_arrow_size - static_arrow_size)/2),
+                                 'up': static_arrows_x_position['up'] - ((pressed_arrow_size - static_arrow_size)/2),
+                                 'down': static_arrows_x_position['down'] - ((pressed_arrow_size - static_arrow_size)/2),
+                                 'right': static_arrows_x_position['right'] - ((pressed_arrow_size - static_arrow_size)/2)}
 
 class WindowConfig:
     window_width = 800

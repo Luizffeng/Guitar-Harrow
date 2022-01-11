@@ -5,7 +5,7 @@ import assets
 arConfig = config.ArrowConfig()
 wdConfig = config.WindowConfig()
 
-assets = assets.Assets(0)
+assets = assets.Assets(0, (arConfig.pressed_arrow_size, arConfig.pressed_arrow_size))
 assets.load()
 
 window = pg.display.set_mode((wdConfig.window_width, wdConfig.window_height))
