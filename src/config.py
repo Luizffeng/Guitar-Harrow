@@ -1,4 +1,5 @@
 import pygame as pg
+import random as rd
 
 
 class ArrowConfig:
@@ -24,18 +25,24 @@ class ArrowConfig:
 
     max_arrow_scale = 100
     min_arrow_scale = 25
-    max_arrows = 20
+
+    max_arrows = 100
+
     arrow_falling_speed = 8
 
     pressed_arrow_size = 130
     static_arrow_size = 100
-
     static_arrows_y_position = 400
-    pressed_arrows_y_position = static_arrows_y_position - ((pressed_arrow_size - static_arrow_size)/2)
-    pressed_arrows_x_position = {'left': static_arrows_x_position['left'] - ((pressed_arrow_size - static_arrow_size)/2),
-                                 'up': static_arrows_x_position['up'] - ((pressed_arrow_size - static_arrow_size)/2),
-                                 'down': static_arrows_x_position['down'] - ((pressed_arrow_size - static_arrow_size)/2),
-                                 'right': static_arrows_x_position['right'] - ((pressed_arrow_size - static_arrow_size)/2)}
+
+    pressed_arrows_y_position = static_arrows_y_position - ((pressed_arrow_size - static_arrow_size) / 2)
+    pressed_arrows_x_position = {
+        'left': static_arrows_x_position['left'] - ((pressed_arrow_size - static_arrow_size) / 2),
+        'up': static_arrows_x_position['up'] - ((pressed_arrow_size - static_arrow_size) / 2),
+        'down': static_arrows_x_position['down'] - ((pressed_arrow_size - static_arrow_size) / 2),
+        'right': static_arrows_x_position['right'] - ((pressed_arrow_size - static_arrow_size) / 2)}
+
+    difficult = 10 # 1 ~ 9; 1 is patetic, 9 is insane
+
 
 class WindowConfig:
     window_width = 800
