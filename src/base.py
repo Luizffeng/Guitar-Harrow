@@ -42,19 +42,19 @@ while window_open:
         if event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE:
             window_open = False
 
-    if pressed[pg.K_LEFT]:
+    if pressed[pg.K_LEFT] or pressed[pg.K_d]:
         window.blit(assets.pressed_arrows['left'],
                     (arConfig.pressed_arrows_x_position['left'], arConfig.pressed_arrows_y_position))
 
-    if pressed[pg.K_UP]:
+    if pressed[pg.K_UP] or pressed[pg.K_f]:
         window.blit(assets.pressed_arrows['up'],
                     (arConfig.pressed_arrows_x_position['up'], arConfig.pressed_arrows_y_position))
 
-    if pressed[pg.K_DOWN]:
+    if pressed[pg.K_DOWN] or pressed[pg.K_j]:
         window.blit(assets.pressed_arrows['down'],
                     (arConfig.pressed_arrows_x_position['down'], arConfig.pressed_arrows_y_position))
 
-    if pressed[pg.K_RIGHT]:
+    if pressed[pg.K_RIGHT] or pressed[pg.K_k]:
         window.blit(assets.pressed_arrows['right'],
                     (arConfig.pressed_arrows_x_position['right'], arConfig.pressed_arrows_y_position))
 
