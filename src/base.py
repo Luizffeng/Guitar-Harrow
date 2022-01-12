@@ -3,7 +3,6 @@ import random as rd
 import config
 import assets
 import arrow
-import keys
 
 # Instâncias
 arConfig = config.ArrowConfig()
@@ -37,6 +36,10 @@ while window_open:
     # Mantem a janela aberta
     for event in pg.event.get():
         if event.type == pg.QUIT:
+            window_open = False
+
+        # Desliga a tela apertando ESC
+        if event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE:
             window_open = False
 
     if pressed[pg.K_LEFT]:
@@ -76,7 +79,8 @@ while window_open:
 
 
     # Adiciona setas no array aleatoriamente
-    if rd.random() * 5 <= 1 and len(arrows_array) <= arConfig.max_arrows:
+    random_ratio = rd.uniform(0, 20 - arConfig.difficult)
+    if random_ratio <= 1 and len(arrows_array) <= arConfig.max_arrows:
         arrows_array.append(arrow.Arrow(rd.choice(direction_list), arConfig.arrow_falling_speed))
 
     # Atualiza e Desenha na tela
